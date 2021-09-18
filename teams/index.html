@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Positions</title>
+
+  <!-- FIREBASE -->
+  <script defer src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script defer src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+  <script defer src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+
+  <!-- GOOGLE FONT -->
+
+  
+  <!-- BOOTSTRAP -->
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+  <!-- CSS -->
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="container-fluid" id="main">
+    
+    <div class="row">
+      <form action="javascript:void(0)" method="GET">
+        <div class="col col-sm-10 col-md-6" id="log-in-box">
+          <div class="row m-3 log-in-box"><input class="form-control p-3" type="email" name="" id="email"
+              placeholder="Email" required> <span class="red" id="email_login"></span>
+          </div>
+          <div class="row m-3 log-in-box"><input class="form-control p-3" type="password" name="" id="password"
+              placeholder="Password" required><span class="red" id="pass_login"></span></div>
+          <div class="row m-5 log-in-box"><button type="submit" class="btn btn-secondary bg-primary">
+              <p class="h5" onclick="logIn();">Log In</p>
+            </button></div>
+      </form>
+      
+
+      <div class="row my-3 log-in-box">
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-secondary w-50" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
+          id="sign-up-btn">
+          Sign Up
+        </button>
+      </div>
+
+    </div>
+  </div>
+  </div>
+
+  <!-- SIGN UP MODAL -->
+
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title" id="staticBackdropLabel">Sign Up</h3>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="container-fluid">
+
+            <div class="row">
+
+              <div class="col"><input class="form-control" type="text" name="" id="username" placeholder="Full name"
+                  required></div>
+            </div>
+            <div class="row my-2">
+              <div class="col"><input class="form-control" type="email" name="" id="useremail" placeholder="Email"
+                  required> <span class="red" id="emailcheck"></span> </div>
+            </div>
+            <div class="row">
+              <div class="col"><input class="form-control" type="password" name="" id="userpass" placeholder="Password"
+                  required>
+                <div style="text-align: center;"><span class="red" id="passwordcheck"></span>
+                  <img alt="" width="80" id="check">
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="modal-footer">
+          <div class="d-grid gap-2 col-6 mx-auto">
+            <button type="button" class="btn btn-success btn-lg  px-2 py-1" type="submit" onclick="signUp();">Sign
+              Up</button>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <!-- BOOTSTRAP -->
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
+    integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js"
+    integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/"
+    crossorigin="anonymous"></script>
+
+  <!-- JAVASCRIPT     -->
+
+  <script defer src="./script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
+        integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js"
+        integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/"
+        crossorigin="anonymous"></script>
+    <!-- FIREBASE -->
+    <script defer src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+
+    <!-- <script defer src="./script.js"></script> -->
+    <script defer src="./scrip2.js"></script>
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <button class="btn btn-lg btn-secondary fw-bold position-fixed top-0 end-1 m-2" id="Logout-btn"
+        onclick="logOut();">Sign Out</button>
+    <!-- <button onclick="show();"> show</button> -->
+    <div id="teamsown">
+        <p class="h1 text-center my-5">Teams you own</p>
+        
+
+    </div>
+    
+
+    <div id="teamspart">
+        <p class="h1 text-center my-5">Teams you are part of</p>
+        
+    </div>
+
+
+
+    <!-- MODAL BUTTON -->
+    <button type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
+        class="btn btn-success  btn-lg  position-fixed bottom-0 end-0 m-5">
+        <p class="display-6">+</p>
+    </button>
+
+
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title w-100" id="staticBackdropLabel">Create new team</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+
+                        <div class="row">
+
+                            <div class="col"><input class="form-control" type="text" name="" id="teamname"
+                                    placeholder="Team Name" required> <span class="red" id="groupname"></span> </div>
+                        </div>
+                        <div class="row my-2">
+                            <div class="col"><input class="form-control" type="text" name="" id="category"
+                                    placeholder="Category" required> <span class="red" id="emailcheck"></span> </div>
+                        </div>
+                        <div class="row">
+                            <div class="col"><input class="form-control" type="email" name="" id="members"
+                                    placeholder="Members" required>
+                                <div style="text-align: center;"><span id="listofmembers" style="color: red;"></span>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="d-grid gap-2 col-6 mx-auto">
+                        <button type="button" class="btn btn-success btn-lg  px-2 py-1"
+                            onclick="createTeam();">Create</button>
+
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+</body>
+
+</html>
